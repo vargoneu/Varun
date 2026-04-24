@@ -48,6 +48,7 @@ resource "aws_iam_instance_profile" "ec2_profile" {
 # -----------------------------
 resource "aws_security_group" "ec2_sg" {
   name = "ec2-sg"
+  vpc_id = "vpc-009751cd517b6a638"
 
   ingress {
     description = "SSH Access"

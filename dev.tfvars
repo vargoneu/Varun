@@ -1,0 +1,5 @@
+instance_type = "t2.micro"
+ami_id        = "ami-0c1fe732b5494dc14"
+region        = "us-east-1"
+key_name      = "pravi"
+sns_email     = "vgone@teksystems.com"

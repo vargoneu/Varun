@@ -73,11 +73,12 @@ resource "aws_instance" "app" {
   ami           = var.ami_id
   instance_type = var.instance_type
 
-  key_name               = var.key_name
-  iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
+  subnet_id              = "subnet-09463a3daee5d0136"  
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
-  depends_on = [aws_iam_role_policy_attachment.cw_policy]
+  key_name               = var.key_name
+  iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
+   associate_public_ip_address = true  
 
   tags = {
     Name = "Terraform-Instance"
